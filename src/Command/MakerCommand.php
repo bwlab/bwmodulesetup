@@ -150,7 +150,7 @@ class MakerCommand extends Command
             .DIRECTORY_SEPARATOR
             .'Type'
             .DIRECTORY_SEPARATOR
-            .'ConfigurationController.php',
+            .'ConfigurationType.php',
             $file->__toString()
         );
     }
