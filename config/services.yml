@@ -1,0 +1,7 @@
+services:
+  bwlab.bwmodulesetuo.maker:
+    class: Bwlab\BwModuleSetup\Command\MakerCommand
+    arguments:
+      - '@twig'
+    tags:
+      - { name: 'console.command' }

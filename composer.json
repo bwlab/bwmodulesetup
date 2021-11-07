@@ -1,0 +1,33 @@
+{
+  "name": "bwlab/bwmodulesetup",
+  "description": "Setup new module",
+  "homepage": "https://www.bwlab.it",
+  "license": "copyright 2021",
+  "type": "prestashop-module",
+  "authors": [
+    {
+      "name": "Bwlab",
+      "email": "info@bwlab.it"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "bwlab/bwplatformwidget": "dev-master",
+    "nette/php-generator": "v3.6.x-dev"
+  },
+  "minimum-stability": "dev",
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@gitlab.com:bwlab/bwplatformwidget.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Bwlab\\BwModuleSetup\\": "src/"
+    }
+  }
+}

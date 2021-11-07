@@ -1,0 +1,72 @@
+<?php
+/**
+* <YOUR LICENSE HERE>
+*/
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+class {{ module_name|capitalize }} extends Module
+{
+    protected $config_form = false;
+
+    public function __construct()
+    {
+        $this->name = '{{ module_name }}';
+        $this->tab = '????'; // edit
+        $this->version = '1.0.0';
+        $this->author = '??????'; // edit
+        $this->need_instance = 0;
+
+        /**
+         * Set $this->bootstrap to true if your module is compliant with bootstrap (PrestaShop 1.6)
+         */
+        $this->bootstrap = true;
+
+        parent::__construct();
+
+        $this->displayName = $this->trans('Create main order',[],'Amin.Modules.{{ module_name|capitalize }}');
+        $this->description = $this->trans('Create main order from other order',[], 'Amin.Modules.{{ module_name|capitalize }}');
+
+        $this->confirmUninstall = $this->trans('Are you sure?',[], 'Amin.Modules.{{ module_name|capitalize }}');
+
+        $this->ps_versions_compliancy = array('min' => '1.7', 'max' => _PS_VERSION_);
+    }
+
+    /**
+     * Don't forget to create update methods if needed:
+     * http://doc.prestashop.com/display/PS16/Enabling+the+Auto-Update
+     */
+    public function install()
+    {
+
+        return parent::install();
+    }
+
+    public function uninstall()
+    {
+
+        return parent::uninstall();
+    }
+
+    /**
+     * Load the configuration form
+     */
+    public function getContent()
+    {
+        /**
+         * la configurazione del modulo è gestita dal controller
+         */
+        Tools::redirectAdmin(
+            $this->context->link->getAdminLink(
+                'Admin{{module_name|capitalize }}',  //edit
+                true,
+                ['route' => 'admin_{{ module_name }}_configuration']
+            )
+        );
+    
+    }
+
+    
+}
