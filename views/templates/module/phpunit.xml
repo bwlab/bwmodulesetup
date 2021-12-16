@@ -3,7 +3,7 @@
 >
     <php>
         <env name="_PS_IN_TEST_" value="0"/>
-        <env name="_DB_NAME_" value="prestashop_1770"/>
+        <env name="_DB_NAME_" value="prestashop_packaging"/>
     </php>
 
     <testsuites>
