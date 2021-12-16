@@ -26,10 +26,10 @@ class {{ module_name|capitalize }} extends Module
 
         parent::__construct();
 
-        $this->displayName = $this->trans('Create main order',[],'Amin.Modules.{{ module_name|capitalize }}');
-        $this->description = $this->trans('Create main order from other order',[], 'Amin.Modules.{{ module_name|capitalize }}');
+        $this->displayName = $this->trans('Create main order',[],'Modules.{{ module_name|capitalize }}.Admin');
+        $this->description = $this->trans('Create main order from other order',[], 'Modules.{{ module_name|capitalize}}.Admin');
 
-        $this->confirmUninstall = $this->trans('Are you sure?',[], 'Amin.Modules.{{ module_name|capitalize }}');
+        $this->confirmUninstall = $this->trans('Are you sure?',[], 'Modules.{{ module_name|capitalize }}.Admin');
 
         $this->ps_versions_compliancy = array('min' => '1.7', 'max' => _PS_VERSION_);
     }
@@ -65,8 +65,8 @@ class {{ module_name|capitalize }} extends Module
                 ['route' => 'admin_{{ module_name }}_configuration']
             )
         );
-    
+
     }
 
-    
+
 }
