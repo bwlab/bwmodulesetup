@@ -12,7 +12,6 @@
   ],
   "require": {
     "php": ">=7.2",
-    "bwlab/bwplatformwidget": "dev-master",
     "nette/php-generator": "v3.6.x-dev",
     "symfony/polyfill-php80": "<=1.18.1"
   },
@@ -20,12 +19,6 @@
   "config": {
     "preferred-install": "dist"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@gitlab.com:bwlab/bwplatformwidget.git"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Bwlab\\BwModuleSetup\\": "src/"
